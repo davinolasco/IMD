@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sobre</title>
+</head>
+
+<body>
+    <h1>Sobre</h1>
+    <ul>
+        <li>Nome: <span id="nome"></span></li>
+        <li>Idade: <span id="idade"></span></li>
+        <li>Cidade: <span id="cidade"></span></li>
+    </ul>
+
+    <script>
+        document.body.style.fontFamily = "Arial, sans-serif";
+        document.getElementById("nome").innerHTML = "Barry Allen";
+        document.getElementById("idade").innerHTML = "23 anos";
+        document.querySelector("#cidade").innerHTML = "Central City";
+        var itens = document.getElementsByTagName("li");
+        for (let i = 0; i < itens.length; i++) {
+            itens[i].style.color = "red";
+        }
+
+        var myImg = document.createElement('img');
+        myImg.src = "https://i.pinimg.com/550x/aa/ed/0a/aaed0a8b93080e50a888780a7922f907.jpg";
+        document.body.appendChild(myImg);
+    </script>
+</body>
+
+</html>

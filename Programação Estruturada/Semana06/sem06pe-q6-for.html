@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Programação Estruturada - Semana 06</title>
+    </head>
+    <body>
+        <h1>Exercício 06 - FOR</h1>
+        N1: <input type="number" id="x" value=""><br />
+        N2: <input type="number" id="y" value=""><br />
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var x = Number(document.getElementById('x').value);
+                var y = Number(document.getElementById('y').value);
+                var r1 = 0;
+                var r2 = 0;
+                for (; x <= y; x++) {
+                    if (x % 2 == 0) {
+                        var r1 = r1 + x;
+                    }
+                    else {
+                        var r2 = r2 + x;
+                    }
+                }
+                document.getElementById('resultado').innerHTML = `${r1} <br> ${r2}`;
+            }
+        </script>
+    </body>
+</html>

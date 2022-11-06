@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Desenvolvimento Front-End I - Aula 07</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=opera">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            header{
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            main{
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            input{
+                width: 100%;
+                padding: 15px;
+                border-radius: 4px;
+                margin-bottom: 15px;
+            }
+            select{
+                width: 102%;
+                padding: 15px;
+                border-radius: 4px;
+                margin-bottom: 15px;
+            }
+            #buttons{
+                width: 20%;
+                height: 20%;
+            }
+        </style>
+    </head>
+    <header>
+        <p><h3>Cadastro de Produtos</h3></p><hr><br>
+    </header>
+    <body>
+        <main>
+        <form action="https://autoria-form.herokuapp.com/">
+            <label for="i-text">SKU:</label><br>
+            <input type="text" name="sku" id="i-text"><br/>
+
+            <label for="i-text2">Produto:</label><br>
+            <input type="text" name="products" id="i-text2"><br/>
+
+            <label for="i-number">Peso:</label><br>
+            <input type="number" name="weight" min="0" step="1" id="i-number"><br>
+
+            <label for="i-unity">Unidade:</label><br>
+            <select id="i-unity" name="unity">
+                <option value="kilogram">quilograma (kg)</option>
+                <option value="gram">grama (g)</option>
+                <option value="tonne">tonelada (t)</option>
+            </select><br/>
+            
+            <label for="i-number2">Largura (cm):</label><br>
+            <input type="number" name="width" min="0" step="1" id="i-number2"><br>
+
+            <label for="i-number3">Altura (cm):</label><br>
+            <input type="number" name="height" min="0" step="1" id="i-number3"><br>
+
+            <label for="i-number4">Profundidade (cm):</label><br>
+            <input type="number" name="depth" min="0" step="1" id="i-number4"><br>
+            
+            <input type="submit" value="Enviar" id="buttons">
+            <input type="reset" value="Limpar" id="buttons">
+        </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>PE - Semana 07 - Q2</title>
+</head>
+
+<body>
+    <h1>Exercício 02</h1>
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        function executarExercicio() {
+            var texto = "";
+            var r = [];
+            for (i = 0; ; i++) {
+	            var p = Number(prompt("Informe um número: "));
+	            r[r.length] = p;
+                r.sort(comparar);
+                if (p === 0) {break};
+            }
+        
+            var maior = null;
+            var maior_oc = -1;
+            var contagem = 1;
+            var indices = [];
+            for (i = 1; i <= r.length; i++) {
+                if (i < r.length && r[i] == r[i - contagem]) {
+                    contagem++;
+                }    
+
+                else if (contagem > maior_oc) {
+                    maior = r[i-1];
+                    maior_oc = contagem;
+                }
+            }
+
+            return document.getElementById("resultado").innerHTML = `Número de maior ocorrência = ${maior}<br>Está presente em ${maior_oc} indices, sendo eles:`;
+        }
+        function comparar(r, p) {return r - p}
+    </script>
+</body>
+
+</html>

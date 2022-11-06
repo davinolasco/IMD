@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Programação Estruturada - Semana 06</title>
+    </head>
+    <body>
+        <h1>Exercício 07</h1>
+        N1: <input type="number" id="ddd" value=""><br />
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var ddd = Number(document.getElementById('ddd').value);
+                var r = Text;
+                switch (ddd) {
+                case 11: r = "São Paulo"; break;
+                case 21: r = "Rio de Janeiro"; break;
+                case 27: r = "Espírito Santo"; break;
+                case 31: r = "Minas Gerais"; break;
+                case 41: r = "Paraná"; break;
+                case 47: r = "Santa Catarina"; break;
+                case 51: r = "Rio Grande do Sul"; break;
+                case 61: r = "Distrito Federal"; break;
+                case 62: r = "Goiás"; break;
+                case 63: r = "Tocantins"; break;
+                case 65: r = "Mato Grosso"; break;
+                case 67: r = "Mato Grosso do Sul"; break;
+                case 68: r = "Acre"; break;
+                case 69: r = "Rondônia"; break;
+                case 71: r = "Bahia"; break;
+                case 79: r = "Sergipe"; break;
+                case 81: r = "Pernambuco"; break;
+                case 82: r = "Alagoas"; break;
+                case 83: r = "Paraíba"; break;
+                case 84: r = "Rio Grande do norte"; break;
+                case 85: r = "Ceará"; break;
+                case 86: r = "Piauí"; break;
+                case 91: r = "Pará"; break;
+                case 92: r = "Amazonas"; break;
+                case 95: r = "Roraima"; break;
+                case 96: r = "Amapá"; break;
+                case 98: r = "Maranhão"; break;
+                default: r = "DDD não encontrado."
+                }
+                document.getElementById('resultado').innerHTML = r;
+            }
+        </script>
+    </body>
+</html>

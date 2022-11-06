@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Programação Estruturada - Semana 06</title>
+    </head>
+    <body>
+        <h1>Exercício 05</h1>
+        N1: <input type="number" id="x" value=""><br />
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var x = Number(document.getElementById('x').value);
+                var r = 0;
+                var i = 1;
+                do {
+                    if (x % i == 0) {
+                        var r = r + i + ' ';
+                        i++;
+                    }
+                    else {
+                        i++;
+                    }
+                } while (i < x);
+                document.getElementById('resultado').innerHTML = r;
+            }
+        </script>
+    </body>
+</html>

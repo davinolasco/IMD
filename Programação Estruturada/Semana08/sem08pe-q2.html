@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE - Aulas 13 e 14 - Q2</title>
+</head>
+
+<body>
+    <h1>Exercício 01</h1>
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        var lista = [];
+        function executarExercicio() {
+            var a = Number(prompt("Quantos números você deseja preencher? "));
+            var lista = solicitarNumeros(a);
+            lista = lista.replace(", ", "");
+            document.getElementById('resultado').innerHTML = `Array = [${lista}]`;
+        }
+
+        function solicitarNumeros(x) {
+            var retorno = "";
+
+            if (x < 0) {
+                retorno = "Digite um número maior ou igual a zero."
+            }
+
+            else if (x === 0) {
+                retorno = ""
+            }
+
+            else {
+                while (x > 0) {
+                    var nums = Number(prompt("Informe o número:"));
+                    retorno = retorno + ", " + nums + solicitarNumeros();
+                    x--;
+                }
+            }
+
+            return retorno;
+        }
+    </script>
+</body>
+
+</html>
